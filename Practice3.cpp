@@ -7,6 +7,7 @@ void inputNumProductsOredered(int orders)
     if (orders < 1)
     {
         cout << "Invalid Entry" << endl;
+        exit(EXIT_FAILURE);
     }
 }
 
@@ -15,6 +16,7 @@ void inputNumProductsInStock(int products)
     if (products < 0)
     {
         cout << "Invalid Entry" << endl;
+        exit(EXIT_FAILURE);
     }
 }
 
@@ -23,6 +25,7 @@ void inputProductPrice(float productPrice)
     if (productPrice < 0)
     {
         cout << "Invalid Entry" << endl;
+        exit(EXIT_FAILURE);
     }
 }
 
@@ -31,17 +34,13 @@ void inputSpecialServiceCharge(float serviceCharge)
     if (serviceCharge < 0)
     {
         cout << "Invalid Entry" << endl;
+        exit(EXIT_FAILURE);
     }
 }
 void showProduct(float productPrice2, float serviceCharge2, int orders2, int productNumber2)
 {
     float total;
     float subTotal;
-    // if (orders2 > productNumber2) {
-    //     cout << "Product number is greater than order number" << endl;
-    //     orders2 = productNumber2;
-    //     cout << "New order number is: " << orders2 << endl;
-    // }
     subTotal = productPrice2 * orders2;
     int backOrder = orders2 - productNumber2;
     float finalserviceCharge = serviceCharge2 * 10;
