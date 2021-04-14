@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+//A Simple Receit Program
 void inputNumProductsOredered(int orders)
 {
     if (orders < 1)
@@ -39,22 +39,13 @@ void inputSpecialServiceCharge(float serviceCharge)
 }
 void showProduct(float productPrice2, float serviceCharge2, int orders2, int productNumber2)
 {
-    float total;
-    float subTotal;
-    subTotal = productPrice2 * orders2;
+    float total, subTotal;
     int backOrder = orders2 - productNumber2;
     float finalserviceCharge = serviceCharge2 * 10;
-    if (finalserviceCharge == 0)
+    if ((finalserviceCharge == 0) || (orders2 > productNumber2))
     {
-        total = subTotal;
-    }
-    else
-    {
-        total = subTotal + finalserviceCharge;
-    }
-
-    if (orders2 > productNumber2)
-    {
+        subTotal = productNumber2 * productPrice2;
+        total = subTotal + finalserviceCharge ;
         cout << "Order Summarry" << endl;
         cout << "==================" << endl;
         cout << "Products Ordered: " << orders2 << endl;
@@ -66,8 +57,10 @@ void showProduct(float productPrice2, float serviceCharge2, int orders2, int pro
         cout << "Service Charges: $" << finalserviceCharge << endl;
         cout << "Totaldue: $" << total << endl;
     }
-    else
+    else if((finalserviceCharge != 0) || (orders2 < productNumber2))
     {
+        subTotal = orders2 * productPrice2;
+        total = subTotal + finalserviceCharge;
         cout << "Order Summarry" << endl;
         cout << "==================" << endl;
         cout << "Products Ordered: " << orders2 << endl;
