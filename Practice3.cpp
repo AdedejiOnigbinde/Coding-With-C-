@@ -42,7 +42,7 @@ void showProduct(float productPrice2, float serviceCharge2, int orders2, int pro
     float total, subTotal;
     int backOrder = orders2 - productNumber2;
     float finalserviceCharge = serviceCharge2 * 10;
-    if ((finalserviceCharge == 0) || (orders2 > productNumber2))
+    if (orders2 > productNumber2)
     {
         subTotal = productNumber2 * productPrice2;
         total = subTotal + finalserviceCharge ;
@@ -57,7 +57,7 @@ void showProduct(float productPrice2, float serviceCharge2, int orders2, int pro
         cout << "Service Charges: $" << finalserviceCharge << endl;
         cout << "Totaldue: $" << total << endl;
     }
-    else if((finalserviceCharge != 0) || (orders2 < productNumber2))
+    else if(orders2 < productNumber2)
     {
         subTotal = orders2 * productPrice2;
         total = subTotal + finalserviceCharge;
