@@ -6,14 +6,14 @@ class Shapes
 {
 
 public:
-    int length, width, radius;
-    const double PI = 3.14;
     Shapes(int len, int wid, int rad)
     {
         len = length;
         wid = width;
         rad = radius;
     };
+    int length, width, radius;
+    const double PI = 3.14;
 };
 class Triangle : Shapes
 {
@@ -54,5 +54,7 @@ class Square : Shapes
 
 int main()
 {
+Shapes sha(); 
+
     return 0;
 }
