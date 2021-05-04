@@ -1,0 +1,1 @@
+userInfo2 << act.interest(30);
