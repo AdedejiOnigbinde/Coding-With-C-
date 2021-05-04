@@ -66,6 +66,7 @@ int main()
     cout << "First Name: " << em1.getFirstName() << endl;
     cout << "Last Name: " << em1.getLastName() << endl;
     cout << "Monthly Salary: " << em1.getMonthlySalary() << endl;
+    cout << "Yearly Salary: " << em1.getMonthlySalary() * 12<< endl;
 
     em2.setFirstName("George");
     em2.setLasttName("Mchaul");
@@ -73,4 +74,5 @@ int main()
     cout << "First Name: " << em2.getFirstName() << endl;
     cout << "Last Name: " << em2.getLastName() << endl;
     cout << "Monthly Salary: " << em2.getMonthlySalary() << endl;
+    cout << "Yearly Salary: " << em2.getMonthlySalary() * 12<< endl;
 }
