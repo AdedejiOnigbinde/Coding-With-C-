@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+//2018/2019 section 2 question 1ii
 class Pensioners
 {
     string firstName;

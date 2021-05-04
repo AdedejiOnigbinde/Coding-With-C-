@@ -54,7 +54,6 @@ class Square : Shapes
 
 int main()
 {
-Shapes sha(); 
-
+Shapes sha();
     return 0;
 }

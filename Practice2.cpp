@@ -17,7 +17,7 @@ public:
     }
     double square()
     {
-        double sqrArea = 4 * x;
+        double sqrArea =  x^2;
         return sqrArea;
     }
     double triangle()
