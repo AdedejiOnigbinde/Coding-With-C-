@@ -45,14 +45,25 @@ void tollBooth::display() const
 int main()
 {
     const int esc = 27;
+    const int enter = 13;
+    const int lshft = 16;
     int key = 0;
     tollBooth mainBridge;
     while (key != esc)
     {
-        mainBridge.payingCar();
-        mainBridge.nopayCar();
-        cout<<"Press Enter To Continue Reading"<<endl<<"Or Press ESC TO Quit"<<endl;
+
+        cout << "Press Enter For Paying Car And Lshift For Non Paying Car" << endl
+             << "Or Press ESC TO Quit" << endl;
         key = getche();
+        if (key == enter)
+        {
+            mainBridge.payingCar();
+        }
+        else if (key == lshft)
+        {
+            mainBridge.nopayCar();
+
+        }
     }
 
     mainBridge.display();
